@@ -11,9 +11,16 @@ var mouse_sensitivity = 0.002
 var mouse_range = 1.2
 var jump = 4
 var jumping = false
+var health = 10
 func _ready():
 	#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	pass
+	
+func take_damage(d):
+	health -= d
+	if health <= 0:
+		print("dead")
+	
 	
 func get_input():
 	var input_dir = Vector3()
@@ -32,6 +39,8 @@ func get_input():
 	return input_dir
 
 func _physics_process(delta):
+	if health <= 0:
+		return
 	velocity.y += gravity * delta
 	var desire_velocity = get_input() * speed
 	

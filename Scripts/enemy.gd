@@ -2,7 +2,16 @@ extends KinematicBody
 
 var state = ""
 var speed = 1
+var health = 10
+var Bullet = preload("res://Scenes/Enemyfire.tscn")
 onready var Scan = $Scanner
+
+func take_damage(d):
+	health -= d
+	if health <= 0:
+		print("dead")
+		queue_free()
+	
 
 func change_state(s):
 	state = s
@@ -20,7 +29,7 @@ func _physics_process(delta):
 		change_state("wait")
 		$Timer.start()
 	if state == "shoot":
-		pass
+		var b = Bullet.instance()
 
 
 func _on_Timer_timeout():

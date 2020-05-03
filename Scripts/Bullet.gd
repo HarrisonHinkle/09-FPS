@@ -1,6 +1,7 @@
 extends Area
 
 var speed = 20
+var damage = 5
 var velocity = Vector3()
 func _ready():
 	pass 
@@ -24,7 +25,7 @@ func _on_Bullet_body_entered(body):
 		body.queue_free()
 		queue_free()
 	if body.name == "enemy":
-		print("hit") 
+		body.take_damage(damage)
 		queue_free()
 		
 	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/pistol.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Assets/woodBirch.material" type="Material" id=7]
 [ext_resource path="res://Scenes/enemy.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scripts/enemy.gd" type="Script" id=9]
+[ext_resource path="res://Scenes/Enemyfire.tscn" type="PackedScene" id=10]
 
 [sub_resource type="PlaneMesh" id=1]
 
@@ -114,4 +115,6 @@ enabled = true
 cast_to = Vector3( 0, -1, -30 )
 
 [node name="Timer" type="Timer" parent="Enemies/enemy"]
+
+[node name="Enemyfire" parent="." instance=ExtResource( 10 )]
 [connection signal="timeout" from="Enemies/enemy/Timer" to="Enemies/enemy" method="_on_Timer_timeout"]
