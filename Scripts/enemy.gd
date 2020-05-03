@@ -4,13 +4,15 @@ var state = ""
 var speed = 1
 var health = 10
 var Bullet = preload("res://Scenes/Enemyfire.tscn")
-
+signal dead
 onready var Scan = $Scanner
+var score = 0
 
 func take_damage(d):
 	health -= d
 	if health <= 0:
-		print("dead")
+		score = score + 5000
+		emit_signal("dead")
 		queue_free()
 	
 
