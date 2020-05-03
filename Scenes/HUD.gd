@@ -5,7 +5,9 @@ func _ready():
 	pass
 
 
-
+func _physics_process(delta):
+	if $Score.text == "Score: 5000":
+		get_tree().change_scene("res://Scenes/Win.tscn")
 
 
 func _on_enemy_dead():
