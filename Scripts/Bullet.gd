@@ -27,5 +27,10 @@ func _on_Bullet_body_entered(body):
 	if body.name == "enemy":
 		body.take_damage(damage)
 		queue_free()
-		
+	if body.name == "enemy2":
+		body.take_damage(damage)
+		queue_free()
+	if body.name == "enemy3":
+		body.take_damage(damage)
+		queue_free()
 	
