@@ -13,3 +13,7 @@ func _physics_process(delta):
 func _on_enemy_dead():
 	var s = get_node("/root/Game/Enemies/enemy").score
 	$Score.text = "Score: " + str(s) 
+
+
+func _on_Timer_timeout():
+	$Objective.visible = not $Objective.visible
