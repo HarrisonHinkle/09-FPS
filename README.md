@@ -1,2 +1,2 @@
-# Project-Template-Godot
-A default Godot project template for MSCH-C220
+# 09-FPS
+This was a major project for my Game Technologycourse at IU. The goal was to make a simple FPS with enemies that will attack you.
