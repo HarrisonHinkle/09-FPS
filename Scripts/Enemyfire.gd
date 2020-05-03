@@ -26,8 +26,7 @@ func _on_Enemyfire_body_entered(body):
 		body.queue_free()
 		queue_free()
 	if body.name == "Player":
-		print("hit") 
-		
+		body.take_damage(damage)
 		queue_free()
 		
 	

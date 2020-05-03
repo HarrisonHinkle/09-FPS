@@ -4,6 +4,7 @@ var state = ""
 var speed = 1
 var health = 10
 var Bullet = preload("res://Scenes/Enemyfire.tscn")
+
 onready var Scan = $Scanner
 
 func take_damage(d):
@@ -30,7 +31,9 @@ func _physics_process(delta):
 		$Timer.start()
 	if state == "shoot":
 		var b = Bullet.instance()
-
+		b.start($Muzzle.global_transform)
+		get_node("/root/Game/EnemyTimer").add_child(b)
+		change_state("shoot_waiting")
 
 func _on_Timer_timeout():
 	var c = Scan.get_collider()
