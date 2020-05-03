@@ -1,7 +1,7 @@
 extends Area
 
 var damage = 5
-var speed = 20
+var speed = 10
 var velocity = Vector3()
 func _ready():
 	pass 

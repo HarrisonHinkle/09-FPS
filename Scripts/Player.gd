@@ -19,7 +19,7 @@ func _ready():
 func take_damage(d):
 	health -= d
 	if health <= 0:
-		print("dead")
+		get_tree().change_scene("res://Scenes/Game Over.tscn")
 	
 	
 func get_input():

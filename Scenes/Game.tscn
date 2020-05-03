@@ -117,7 +117,7 @@ cast_to = Vector3( 0, -1, -30 )
 [node name="Timer" type="Timer" parent="Enemies/enemy"]
 
 [node name="Muzzle" type="Position3D" parent="Enemies/enemy"]
-transform = Transform( 1, -3.25841e-07, -3.25841e-07, -3.25841e-07, -1, 0, -3.25841e-07, 1.06173e-13, -1, 2.6831e-08, 0, -2.25 )
+transform = Transform( 1, -3.25841e-07, -3.25841e-07, -3.25841e-07, -1, 0, -3.25841e-07, 1.06173e-13, -1, 1.57408e-08, 0, -1.32 )
 
 [node name="EnemyTimer" type="Spatial" parent="."]
 script = ExtResource( 10 )
