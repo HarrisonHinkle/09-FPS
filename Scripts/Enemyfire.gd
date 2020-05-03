@@ -1,4 +1,4 @@
-extends KinematicBody
+extends Area
 
 
 # Declare member variables here. Examples:

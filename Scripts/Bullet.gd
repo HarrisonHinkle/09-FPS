@@ -15,10 +15,16 @@ func start(start_from):
 func _on_Timer_timeout():
 	queue_free()
 
-func _bullet_contact(body):
+func _on_Bullet_body_entered(body):
 	if body is StaticBody:
+		print("t")
 		queue_free()
-	if body.get_parent().name == "Items":
+	if body.get_parent().name == "Objects":
+		print("w")
 		body.queue_free()
 		queue_free()
+	if body.name == "enemy":
+		print("hit") 
+		queue_free()
+		
 	

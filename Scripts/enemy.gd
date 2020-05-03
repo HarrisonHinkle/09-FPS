@@ -7,7 +7,6 @@ onready var Scan = $Scanner
 func change_state(s):
 	state = s
 
-
 func _ready():
 	change_state("searching")
 
@@ -26,4 +25,11 @@ func _physics_process(delta):
 
 func _on_Timer_timeout():
 	var c = Scan.get_collider()
-	
+	if c != null and c.name == 'Player':
+		if state == "wait":
+			change_state("shoot")
+		if state == "shoot_waiting":
+			change_state("shoot")
+	else:
+		change_state("searching")
+
