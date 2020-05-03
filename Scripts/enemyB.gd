@@ -2,7 +2,7 @@ extends KinematicBody
 
 var state = ""
 var speed = 1
-var health = 10
+var health = 20
 var Bullet = preload("res://Scenes/Enemyfire.tscn")
 signal dead
 onready var Scan = $Scanner
